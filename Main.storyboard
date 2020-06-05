@@ -405,34 +405,44 @@
                                 </constraints>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="31588" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="34" y="180" width="346" height="100"/>
+                                <rect key="frame" x="34" y="110" width="346" height="100"/>
                                 <state key="normal" backgroundImage="ConvertButtonsNumbers.png"/>
-                                <constraints>
-                                    <constraint id="31594" firstAttribute="height" constant="100"/>
-                                </constraints>
                                 <connections>
                                     <segue id="32672" destination="BYZ-38-t0r" kind="show" identifier="Number_Convert_Segue"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="69251" firstAttribute="height" constant="100"/>
+                                </constraints>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="31596" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="34" y="318" width="346" height="100"/>
+                                <rect key="frame" x="34" y="245" width="346" height="100"/>
                                 <state key="normal" backgroundImage="ConvertButtonsText.png"/>
-                                <constraints>
-                                    <constraint id="31597" firstAttribute="height" constant="100"/>
-                                </constraints>
                                 <connections>
                                     <segue id="33215" destination="33127" kind="show" identifier="Text_Convert_Segue"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="69255" firstAttribute="height" constant="100"/>
+                                </constraints>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="43339" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="34" y="456" width="346" height="100"/>
+                                <rect key="frame" x="34" y="380" width="346" height="100"/>
                                 <state key="normal" backgroundImage="ConvertIPs.png"/>
-                                <constraints>
-                                    <constraint id="43342" firstAttribute="height" constant="100"/>
-                                </constraints>
                                 <connections>
                                     <segue id="45682" destination="45460" kind="show" identifier="IP_Convert_Segue"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="69259" firstAttribute="height" constant="100"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="69240" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="34" y="515" width="346" height="100"/>
+                                <state key="normal" backgroundImage="ConvertBitButton.png"/>
+                                <connections>
+                                    <segue id="69393" destination="69267" kind="show"/>
+                                </connections>
+                                <constraints>
+                                    <constraint id="69263" firstAttribute="height" constant="100"/>
+                                </constraints>
                             </button>
                         </subviews>
                         <constraints>
@@ -440,15 +450,18 @@
                             <constraint id="30895" firstItem="30892" firstAttribute="leading" secondItem="30884" secondAttribute="leadingMargin"/>
                             <constraint id="30896" firstItem="30892" firstAttribute="trailing" secondItem="30884" secondAttribute="trailingMargin"/>
                             <constraint id="30897" firstItem="30881" firstAttribute="top" secondItem="30892" secondAttribute="bottom" constant="20"/>
-                            <constraint id="31591" firstAttribute="trailingMargin" secondItem="31588" secondAttribute="trailing" constant="14"/>
-                            <constraint id="31592" firstItem="31588" firstAttribute="leading" secondItem="30884" secondAttribute="leadingMargin" constant="14"/>
-                            <constraint id="31600" firstItem="31596" firstAttribute="leading" secondItem="30884" secondAttribute="leadingMargin" constant="14"/>
-                            <constraint id="31601" firstAttribute="trailingMargin" secondItem="31596" secondAttribute="trailing" constant="14"/>
-                            <constraint id="43351" firstItem="43339" firstAttribute="top" secondItem="31596" secondAttribute="bottom" constant="38"/>
-                            <constraint id="43352" firstItem="43339" firstAttribute="leading" secondItem="30884" secondAttribute="leadingMargin" constant="14"/>
-                            <constraint id="43353" firstAttribute="trailingMargin" secondItem="43339" secondAttribute="trailing" constant="14"/>
-                            <constraint id="43354" firstItem="31596" firstAttribute="centerY" secondItem="30884" secondAttribute="centerY"/>
-                            <constraint id="43355" firstItem="31596" firstAttribute="top" secondItem="31588" secondAttribute="bottom" constant="38"/>
+                            <constraint id="69248" firstItem="31588" firstAttribute="top" secondItem="30880" secondAttribute="bottom" constant="40"/>
+                            <constraint id="69249" firstItem="31588" firstAttribute="leading" secondItem="30884" secondAttribute="leadingMargin" constant="14"/>
+                            <constraint id="69250" firstAttribute="trailingMargin" secondItem="31588" secondAttribute="trailing" constant="14"/>
+                            <constraint id="69252" firstItem="31596" firstAttribute="top" secondItem="31588" secondAttribute="bottom" constant="35"/>
+                            <constraint id="69253" firstItem="31596" firstAttribute="leading" secondItem="30884" secondAttribute="leadingMargin" constant="14"/>
+                            <constraint id="69254" firstAttribute="trailingMargin" secondItem="31596" secondAttribute="trailing" constant="14"/>
+                            <constraint id="69256" firstItem="43339" firstAttribute="top" secondItem="31596" secondAttribute="bottom" constant="35"/>
+                            <constraint id="69257" firstItem="43339" firstAttribute="leading" secondItem="30884" secondAttribute="leadingMargin" constant="14"/>
+                            <constraint id="69258" firstAttribute="trailingMargin" secondItem="43339" secondAttribute="trailing" constant="14"/>
+                            <constraint id="69260" firstItem="69240" firstAttribute="top" secondItem="43339" secondAttribute="bottom" constant="35"/>
+                            <constraint id="69261" firstItem="69240" firstAttribute="leading" secondItem="30884" secondAttribute="leadingMargin" constant="14"/>
+                            <constraint id="69262" firstAttribute="trailingMargin" secondItem="69240" secondAttribute="trailing" constant="14"/>
                         </constraints>
                     </view>
                     <connections>
@@ -456,6 +469,7 @@
                         <outlet property="Convert_Numbers_TextBox" destination="31588" id="name-outlet-31588"/>
                         <outlet property="Convert_IP_TextBox" destination="43339" id="name-outlet-43339"/>
                         <outlet property="Convert_Text_TextBox" destination="31596" id="name-outlet-31596"/>
+                        <outlet property="ConvertBitButton" destination="69240" id="name-outlet-69240"/>
                     </connections>
                     <navigationItem title="Conversions" id="31155" key="navigationItem"/>
                 </viewController>
@@ -630,7 +644,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33129" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="322" y="465"/>
+            <point key="canvasLocation" x="1070" y="61"/>
         </scene>
         <scene sceneID="45459">
             <objects>
@@ -904,12 +918,222 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45462" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="1274"/>
+            <point key="canvasLocation" x="523" y="508"/>
+        </scene>
+        <scene sceneID="69266">
+            <objects>
+                <viewController id="69267" sceneMemberID="viewController" customClass="BitwiseViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="69264"/>
+                        <viewControllerLayoutGuide type="bottom" id="69265"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="69268">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="custom" customColorSpace="sRGB" red="0.0514113083481789" green="0.998555958271027" blue="0" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer Science" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="70154" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="3">
+                                <rect key="frame" x="20" y="607" width="374" height="109"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="30"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <color key="highlightedColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <color key="shadowColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                <size key="shadowOffset" width="3" height="-1"/>
+                                <constraints>
+                                    <constraint id="70155" firstAttribute="height" constant="109"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Integer One:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="74697" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="79" width="374" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24" weight="black"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <color key="highlightedColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <constraints>
+                                    <constraint id="74698" firstAttribute="height" constant="28"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="74699" translatesAutoresizingMaskIntoConstraints="NO" placeholder="First Input Number">
+                                <rect key="frame" x="20" y="115" width="374" height="34"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Decimal_Changed:" destination="74701" id="74700" eventType="editingChanged"/>
+                                    <action selector="Decimal16_Changed:" destination="74703" id="74702" eventType="editingChanged"/>
+                                    <action selector="Input1Changed:" destination="69267" id="77243" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="74704" translatesAutoresizingMaskIntoConstraints="NO" text="Integer Two:">
+                                <rect key="frame" x="20" y="157" width="374" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24" weight="black"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="74705" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="74706" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Second Input Number">
+                                <rect key="frame" x="20" y="191" width="374" height="34"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Binary_Changed:" destination="74701" id="74707" eventType="editingChanged"/>
+                                    <action selector="Decimal32_Changed:" destination="74703" id="74708" eventType="editingChanged"/>
+                                    <action selector="Input2Changed:" destination="69267" id="77244" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="74709">
+                                <rect key="frame" x="20" y="234" width="374" height="29"/>
+                                <segments>
+                                    <segment title="&amp;"/>
+                                    <segment title="|"/>
+                                    <segment title="^"/>
+                                    <segment title="~"/>
+                                    <segment title="&lt;&lt;"/>
+                                    <segment title="&gt;&gt;"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmentedControlChanged:" destination="74711" id="74710" eventType="valueChanged"/>
+                                    <action selector="SegementedPicker:" destination="69267" id="75069" eventType="valueChanged"/>
+                                </connections>
+                                <constraints>
+                                    <constraint id="74750" firstAttribute="height" constant="28"/>
+                                </constraints>
+                                <color key="backgroundColor" systemColor="systemGreenColor" colorSpace="custom" customColorSpace="sRGB" red="0.203921568627451" green="0.780392156862745" blue="0.349019607843137" alpha="1"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="74718" translatesAutoresizingMaskIntoConstraints="NO" text="Results:">
+                                <rect key="frame" x="20" y="270" width="374" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24" weight="black"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="74719" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="74720" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Input One Binary" enabled="NO">
+                                <rect key="frame" x="20" y="304" width="374" height="34"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Hexadecimal_Changed:" destination="74701" id="74721" eventType="editingChanged"/>
+                                    <action selector="Binary_Changed:" destination="74703" id="74722" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="74723" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="277" y="464" width="117" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17" weight="black"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Clear Text">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                    <color key="titleShadowColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="74727" firstAttribute="height" constant="30"/>
+                                    <constraint id="74728" firstAttribute="width" constant="117"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="Clear_Button_TouchUpInside:" destination="74701" id="74724" eventType="touchUpInside"/>
+                                    <action selector="Clear_Clicked:" destination="74703" id="74725" eventType="touchUpInside"/>
+                                    <action selector="ClearButton_TouchUpInside:" destination="74711" id="74726" eventType="touchUpInside"/>
+                                    <action selector="ClearButton_TouchUpInside:" destination="69267" id="75068" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="78590" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Input Two Binary" enabled="NO">
+                                <rect key="frame" x="20" y="346" width="374" height="34"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Hexadecimal_Changed:" destination="78592" id="78591" eventType="editingChanged"/>
+                                    <action selector="Binary_Changed:" destination="78594" id="78593" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="78595" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Bitwise Result" enabled="NO">
+                                <rect key="frame" x="20" y="422" width="374" height="34"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="Hexadecimal_Changed:" destination="78597" id="78596" eventType="editingChanged"/>
+                                    <action selector="Binary_Changed:" destination="78599" id="78598" eventType="editingChanged"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="81664" translatesAutoresizingMaskIntoConstraints="NO" text="Bitwise AND">
+                                <rect key="frame" x="20" y="388" width="374" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24" weight="black"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="81665" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="70156" firstItem="70154" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="70157" firstItem="70154" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="70158" firstAttribute="bottom" secondItem="70154" secondAttribute="bottom" constant="20"/>
+                            <constraint id="74734" firstItem="74697" firstAttribute="top" secondItem="69264" secondAttribute="bottom" constant="9"/>
+                            <constraint id="74735" firstItem="74697" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="74736" firstItem="74697" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="74737" firstItem="74699" firstAttribute="top" secondItem="74697" secondAttribute="bottom" constant="8"/>
+                            <constraint id="74739" firstItem="74699" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="74740" firstItem="74699" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="74741" firstItem="74704" firstAttribute="top" secondItem="74699" secondAttribute="bottom" constant="8"/>
+                            <constraint id="74742" firstItem="74704" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="74743" firstItem="74704" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="74744" firstItem="74706" firstAttribute="top" secondItem="74704" secondAttribute="bottom" constant="8"/>
+                            <constraint id="74745" firstItem="74706" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="74746" firstItem="74706" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="74747" firstItem="74709" firstAttribute="top" secondItem="74706" secondAttribute="bottom" constant="9"/>
+                            <constraint id="74748" firstItem="74709" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="74749" firstItem="74709" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="74751" firstItem="74718" firstAttribute="top" secondItem="74709" secondAttribute="bottom" constant="8"/>
+                            <constraint id="74752" firstItem="74718" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="74753" firstItem="74718" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="74754" firstItem="74720" firstAttribute="top" secondItem="74718" secondAttribute="bottom" constant="8"/>
+                            <constraint id="74755" firstItem="74720" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="74756" firstItem="74720" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="78919" firstItem="74723" firstAttribute="top" secondItem="78595" secondAttribute="bottom" constant="8"/>
+                            <constraint id="78920" firstItem="74723" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="78921" firstItem="78590" firstAttribute="top" secondItem="74720" secondAttribute="bottom" constant="8"/>
+                            <constraint id="78922" firstItem="78590" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="78923" firstItem="78590" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="78925" firstItem="78595" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="78926" firstItem="78595" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="81667" firstItem="81664" firstAttribute="top" secondItem="78590" secondAttribute="bottom" constant="8"/>
+                            <constraint id="81668" firstItem="81664" firstAttribute="leading" secondItem="69268" secondAttribute="leadingMargin"/>
+                            <constraint id="81669" firstItem="81664" firstAttribute="trailing" secondItem="69268" secondAttribute="trailingMargin"/>
+                            <constraint id="81670" firstItem="78595" firstAttribute="top" secondItem="81664" secondAttribute="bottom" constant="8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BitView" destination="69268" id="name-outlet-69268"/>
+                        <outlet property="InputLabel1" destination="74697" id="name-outlet-74697"/>
+                        <outlet property="InputTextbox1" destination="74699" id="name-outlet-74699"/>
+                        <outlet property="InputNumber2" destination="74704" id="name-outlet-74704"/>
+                        <outlet property="InputTextbox2" destination="74706" id="name-outlet-74706"/>
+                        <outlet property="SegementedControl" destination="74709" id="name-outlet-74709"/>
+                        <outlet property="Results" destination="74718" id="name-outlet-74718"/>
+                        <outlet property="Input1Binary" destination="74720" id="name-outlet-74720"/>
+                        <outlet property="ClearButton" destination="74723" id="name-outlet-74723"/>
+                        <outlet property="CS_Label" destination="70154" id="name-outlet-70154"/>
+                        <outlet property="ResultsTextbox" destination="78595" id="name-outlet-78595"/>
+                        <outlet property="Input2Binary" destination="78590" id="name-outlet-78590"/>
+                        <outlet property="TypeLabel" destination="81664" id="name-outlet-81664"/>
+                    </connections>
+                    <navigationItem id="70152" key="navigationItem" title="Bitwise Operations"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69269" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="1115"/>
         </scene>
     </scenes>
     <resources>
         <image name="ConvertButtonsNumbers.png" width="432" height="144"/>
         <image name="ConvertButtonsText.png" width="432" height="144"/>
         <image name="ConvertIPs.png" width="432" height="144"/>
+        <image name="ConvertBitButton.png" width="432" height="144"/>
     </resources>
 </document>

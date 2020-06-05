@@ -28,6 +28,10 @@ namespace ComputerScienceCalculator
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ConvertBitButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel CS_Label { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -45,6 +49,11 @@ namespace ComputerScienceCalculator
             if (Convert_Text_TextBox != null) {
                 Convert_Text_TextBox.Dispose ();
                 Convert_Text_TextBox = null;
+            }
+
+            if (ConvertBitButton != null) {
+                ConvertBitButton.Dispose ();
+                ConvertBitButton = null;
             }
 
             if (CS_Label != null) {

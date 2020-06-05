@@ -139,6 +139,10 @@
     <Compile Include="IPConversions.cs" />
     <Compile Include="Subnetting.cs" />
     <Compile Include="IPAddress.cs" />
+    <Compile Include="BitwiseViewController.cs" />
+    <Compile Include="BitwiseViewController.designer.cs">
+      <DependentUpon>BitwiseViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork%402x" />
@@ -149,6 +153,7 @@
     <BundleResource Include="Resources\ConvertButtonsText.png" />
     <BundleResource Include="Resources\LoadingLogo6.png" />
     <BundleResource Include="Resources\ConvertIPs.png" />
+    <BundleResource Include="Resources\ConvertBitButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
