@@ -11,11 +11,35 @@ namespace ComputerScienceCalculator
         }
         private int input1, input2;
         private string[] type = { "Bitwise AND", "Bitwise OR", "Bitwise XOR", "Bitwise NOT", "Bitwise LEFT", "Bitwise RIGHT" };
+        UIToolbar toolbar;
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             CS_Label.Text = "Computer Science" + Environment.NewLine + "Converter";
             View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("ConverterBackground.png"));
+
+
+            //Input1, and Input2  share the same toolbar
+            toolbar = new UIToolbar(new CoreGraphics.CGRect(new nfloat(0.0f), new nfloat(0.0f), this.View.Frame.Size.Width, new nfloat(44.0f)));
+            toolbar.TintColor = UIColor.White;
+            toolbar.BarStyle = UIBarStyle.Black;
+            toolbar.Translucent = true;
+            toolbar.Items = new UIBarButtonItem[]{
+          new UIBarButtonItem("Bitwise:", UIBarButtonItemStyle.Bordered, AddTLD),
+          new UIBarButtonItem(UIBarButtonSystemItem.FlexibleSpace),
+          new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate
+            {
+                this.InputTextbox1.ResignFirstResponder();
+                InputTextbox2.ResignFirstResponder();
+            })
+        };
+            InputTextbox1.KeyboardAppearance = UIKeyboardAppearance.Default;
+            InputTextbox1.InputAccessoryView = toolbar;
+            InputTextbox2.KeyboardAppearance = UIKeyboardAppearance.Default;
+            InputTextbox2.InputAccessoryView = toolbar;
+
+
         }
 
         partial void ClearButton_TouchUpInside(UIButton sender)
@@ -142,6 +166,15 @@ namespace ComputerScienceCalculator
         private int RIGHT_SHIFT()
         {
             return input1 >> input2;
+        }
+
+        private void AddTLD(object sender, EventArgs e)
+        {
+            if (sender == null)
+            {
+                return;
+            }
+            var txt = ((UIBarButtonItem)sender).Title;
         }
     }
 }
