@@ -13,3 +13,9 @@ Being a computer science major, I saw an opportunity to build an application to 
 
 # Tech
 Built using Object-Oriented Design and C#.
+
+
+# Preview
+Computer Science Converter                 |  iOS App
+:-------------------------:|:-------------------------:
+![alt text 1](https://github.com/ajrotert/Computer-Science-Calculator/blob/master/ComputerScienceConverter.gif?raw=true)  |   iPhone Only
